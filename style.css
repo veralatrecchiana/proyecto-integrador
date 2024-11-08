@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/*header*/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 0 30px;
+    background-color: aliceblue;
+}
+
+header .logo{
+    width: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+header ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header li{
+    margin-left: 30px;
+    list-style: none; /* saco puntos de lista*/
+}
+
+header a{
+    text-decoration: none;
+    color: black;
+}
+
+.button{
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 10px 20px;
+    margin-top: 15px;
+}

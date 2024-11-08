@@ -27,3 +27,12 @@ fetch('https://dummyjson.com/recipes')
     .catch(function(error){
         console.log("Mi error fue ", error)
     });
+
+/*let confirmacion = document.querySelector(".buscador")
+
+if (confirmacion){
+    confirmacion === ""
+}else if{
+    confirmacion < 3
+}*/
+

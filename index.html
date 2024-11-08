@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Trabajo integrador</title>
 </head>
 <body>
@@ -10,19 +11,19 @@
         <section class="logo">
             <img src="./imgs/logo.png" alt="logo">
         </section>
-        <div>
-            <form action="categories.html" method="get">
-                <input type="text" name="buscar" value="" placeholder="">
-                <button type="submit">Buscar</button>
-            </form>
-        </div>
         <div class="navigation">
             <ul class="user">
                 <li href="index.html">Inicio</li>
                 <li href="categories.html">Categorias</li>
-                <li href="login.html">Login</li>
+                <li href="login.html">Iniciar sesión</li>
                 <li href="register.html">Registro</li>
             </ul>
+        </div>
+        <div>
+            <form action="categories.html" method="get" class="buscador">
+                <input type="text" name="buscar" value="" placeholder="">
+                <button type="submit" class="button">Buscar</button>
+            </form>
         </div>
     </header>
     
