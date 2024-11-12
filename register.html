@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <section class="logo">
+            <img src="./imgs/logo.png" alt="logo">
+        </section>
+        <div class="navigation">
+            <ul class="user">
+                <li href="index.html">Inicio</li>
+                <li href="categories.html">Categorias</li>
+                <li href="login.html">Iniciar sesión</li>
+                <li href="register.html">Registro</li>
+            </ul>
+        </div>
+        <div>
+            <form action="categories.html" method="get" class="buscador">
+                <input type="text" name="buscar" value="" placeholder="">
+                <button type="submit" class="button">Buscar</button>
+            </form>
+        </div>
+    </header>
+    <section class = "registro">
+        <h2 class = "sub">
+            REGISTRARME
+        </h2>
+
+        <h3>
+            Información personal
+        </h3>
+
+        <form action="login.html" method="get" id = 'formulario'>
+            
+            <div>
+                <label for="email">E-mail</label>
+                <input type = "email" name = "email" placeholder="Ej: robertamanzur@hotmail.com" id="email">
+                <div id="error-email"></div>
+            </div>
+            
+            <div>
+                <label for="password">Contraseña</label>
+                <input type = "password" name="password" id="password">
+                <div id="error-password"></div>
+            </div>
+
+            <div>
+                <label for="checkbox">Acepto Terminos y Condiciones</label>
+                <input type="checkbox" name = "checkbox" id="checkbox">
+            </div>
+
+        <button>REGISTRARME</button>
+
+        <button href="login.html" class = 'yatengocuenta'>YA TENGO CUENTA</button>
+        
+
+        </form>
+    </section>
+    <script src="register.js"></script>
+    <footer>
+        <p>Integrantes del grupo: Bautista Martinez Ferrari, Julieta Sprenger y Vera Latrecchiana</p>
+    </footer>
+</body>
+</html>

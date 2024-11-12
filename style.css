@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
 } /*saco bordes generales de la pagina*/
+
 /*header*/
 header{
     display: flex;
@@ -42,6 +43,10 @@ header a{
     margin-top: 15px;
 }
 
+.navigation{
+    align-items: center;
+}
+
 /*footer*/
 footer{
     display: flex;
@@ -53,4 +58,14 @@ footer{
     text-align: center;
     bottom: 0%;
     width: 100%;
+}
+
+/*login*/
+.login{
+    text-align: center;
+}
+
+/*register*/
+.registro{
+    text-align: center;
 }
