@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-}
+} /*saco bordes generales de la pagina*/
 /*header*/
 header{
     display: flex;
@@ -40,4 +40,17 @@ header a{
     background-color: white;
     padding: 10px 20px;
     margin-top: 15px;
+}
+
+/*footer*/
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    padding: 0 30px;
+    background-color: aliceblue;
+    text-align: center;
+    bottom: 0%;
+    width: 100%;
 }
