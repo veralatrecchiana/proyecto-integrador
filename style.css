@@ -66,7 +66,19 @@ footer{
     text-align: center;
 }
 
+.login .cuenta{
+    padding: 2%;
+    color: black;
+    text-decoration: none;
+}
+
 /*register*/
 .registro{
     text-align: center;
+}
+
+.registro .cuenta{
+    padding: 2%;
+    color: black;
+    text-decoration: none;
 }

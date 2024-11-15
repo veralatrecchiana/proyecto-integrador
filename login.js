@@ -1,17 +1,17 @@
-let formulario = document.querySelector("form")
+let formulario = document.querySelector('#login');
 let campoEmail = document.querySelector("#email")
 let campoContrasena = document.querySelector("#contraseña")
 
-formulario.addEventListener("submit", function(event){
+formulario.addEventListener('submit', function(event){
     event.preventDefault();
     let todosOk = true;
-    
-    if (campoEmail.value == ""){
+
+    if (campoEmail.value === ""){
         alert("Por favor complete el campo Email.");
         todosOk = false;
     }
 
-    if (campoContrasena. value == ""){
+    if (campoContrasena. value === ""){
         alert("Por favor complete el campo contraseña.");
         todosOk = false;
     }
@@ -21,7 +21,7 @@ formulario.addEventListener("submit", function(event){
         todosOk = false;
     }
 
-    if (todosOk == true){
+    if (todosOk === true){
         localStorage.setItem("email", campoEmail.value);
         localStorage.setItem("contraseña", campoContrasena.value);
         console.log(localStorage);
