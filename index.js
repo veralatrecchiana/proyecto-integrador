@@ -28,11 +28,22 @@ fetch('https://dummyjson.com/recipes')
         console.log("Mi error fue ", error)
     });
 
-/*let confirmacion = document.querySelector(".buscador")
+//
 
-if (confirmacion){
-    confirmacion === ""
-}else if{
-    confirmacion < 3
-}*/
+let formulario = document.querySelector("#buscador");
+let campoBusqueda = document.querySelector("#terminoBusqueda");
 
+formulario.addEventListener("submit", function(event) {
+    event.preventDefault(); // Evitamos que se envíe el formulario si hay errores
+    let todosOk = true;
+
+    if (campoBusqueda.value === "") {
+        alert("Por favor, completa el campo de búsqueda.");
+        todosOk = false;
+    } else if (campoBusqueda.value.length < 3) {
+        alert("El término de búsqueda debe tener al menos 3 caracteres.");
+        todosOk = false;
+    } if (todosOk) {
+        this.submit(); 
+    }
+});
