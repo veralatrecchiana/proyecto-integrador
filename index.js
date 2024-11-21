@@ -1,29 +1,44 @@
-fetch('https://dummyjson.com/recipes')
-.then(res => res.json())
-.then(console.log);
+const recetasLista = document.querySelector(".recetasLista");
+const loadMoreButton = document.getElementById("load-more");
 
-const recetasLista = document.querySelector(".recetasLista")
-let recetas = ""
+let currentIndex = 0; // Índice actual de recetas
+const recetasPerPage = 10; // Cantidad de recetas a cargar por "ver mas"
 
-fetch('https://dummyjson.com/recipes')
-    .then(function(response){
-        return response.json();
+function loadRecipes() {
+  fetch('https://dummyjson.com/recipes')
+    .then(response => response.json())
+    .then(data => {
+      const allRecipes = data.recipes;
+
+      // Obtener las próximas recetas a mostrar
+      const nextRecipes = allRecipes.slice(currentIndex, currentIndex + recetasPerPage);
+
+      nextRecipes.forEach(receta => {
+        const markUp = `
+          <article class="receta">
+            <img src="${receta.image}" alt="${receta.name}" class="receta-img">
+            <h2>${receta.name}</h2>
+            <p><strong>Dificultad:</strong> ${receta.difficulty || "Desconocida"}</p>
+            <a href="/detalle.html?id=${receta.id}" class="detalle-link">Ver detalles</a>
+          </article>
+        `;
+        recetasLista.innerHTML += markUp;
+      });
+
+      currentIndex += recetasPerPage;
+
+      // Desactivar el botón si no hay más recetas
+      if (currentIndex >= allRecipes.length) {
+        loadMoreButton.style.display = "none";
+      }
     })
-    .then(function(data){
-        console.log(data.recipes);
-        for(let i=0; i<10; i++){
-            const receta = data.recipes[i] //1 receta//
-            const markUp = `
-            <article class="recetas">
-                <img src="${receta.image}" alt="${receta.name}">
-                <p>Name: ${receta.name}</p>
-                <p>Status: ${receta.status}</p>
-            </article>`;
-            recetas += markUp
-        }
-        recetasLista.innerHTML = recetas;
-    })
-
-    .catch(function(error){
-        console.log("Mi error fue ", error)
+    .catch(error => {
+      console.error("Error al cargar las recetas:", error);
     });
+}
+
+// Evento para cargar más recetas al hacer click
+loadMoreButton.addEventListener("click", loadRecipes);
+
+// Cargar las primeras recetas al cargar la página
+loadRecipes();
