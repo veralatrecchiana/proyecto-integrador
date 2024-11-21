@@ -11,7 +11,7 @@ fetch('https://dummyjson.com/recipes')
     })
     .then(function(data){
         console.log(data.recipes);
-        for(let i=0; i<data.recipes.length; i++){
+        for(let i=0; i<10; i++){
             const receta = data.recipes[i] //1 receta//
             const markUp = `
             <article class="recetas">
@@ -27,23 +27,3 @@ fetch('https://dummyjson.com/recipes')
     .catch(function(error){
         console.log("Mi error fue ", error)
     });
-
-//
-
-let formulario = document.querySelector("#buscador");
-let campoBusqueda = document.querySelector("#terminoBusqueda");
-
-formulario.addEventListener("submit", function(event) {
-    event.preventDefault(); // Evitamos que se envíe el formulario si hay errores
-    let todosOk = true;
-
-    if (campoBusqueda.value === "") {
-        alert("Por favor, completa el campo de búsqueda.");
-        todosOk = false;
-    } else if (campoBusqueda.value.length < 3) {
-        alert("El término de búsqueda debe tener al menos 3 caracteres.");
-        todosOk = false;
-    } if (todosOk) {
-        this.submit(); 
-    }
-});
