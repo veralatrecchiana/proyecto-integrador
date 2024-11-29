@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <header>
@@ -14,41 +14,36 @@
         <div class="navigation">
             <ul class="user">
                 <li><a href="index.html">Inicio</a></li>
-                <li<a href="category.html">Categorias</a></li>
-                <li<a href="login.html">Iniciar sesión</a></li>
-                <li<a href="register.html">Registro</a></li>
+                <li><a href="categories.html">Categorias</a></li>
+                <li><a href="login.html">Iniciar sesión</a></li>
+                <li><a href="register.html">Registro</a></li>
             </ul>
         </div>
         <div>
-            <form action="categories.html" method="get" class="buscador" id="buscador">
+            <form action="search-results.html" method="get" class="buscador" id="buscador">
                 <input id="terminoBusqueda" type="text" name="buscar" value="" placeholder="">
                 <button type="submit" class="button">Buscar</button>
             </form>
         </div>
     </header>
-    <href class="login">
+    <section class="login">
         <h2>LOGIN</h2>
         <form action="login.html" method="get" id="login">
             <div>
                 <label for="email">E-mail:</lavel>
                 <input id="email" type="mail" name="email" value="" placeholder="Ej: robertamanzur@hotmail.com">
             </div>
-            <p></p>
             <div>
                 <label for="contraseña">Contraseña:</label>
                 <input id="contraseña" type="password" name="pass" value="">
             </div>
-            <p></p>
-            <a >
-            <button href="index.html">INGRESAR</button>
-            </a>
-            <p></p>
-            <a class="cuenta" href="register.html">NO TENGO CUENTA</a>
+            <button type="submit" href="index.html">INGRESAR</button>
         </form>
-        </href>
-        <script src="login.js"></script>
+        <a class="cuenta" href="register.html">No tengo cuenta</a>
+    </section>
+        <script src="./js/login.js"></script>
     <footer>
-        <p>Integrantes del grupo: Bautista Martinez Ferrari, Julieta Sprenger y Vera Latrecchiana</p>
+        <p>Integrante del grupo: Vera Latrecchiana</p>
     </footer>
 </body>
 </html>

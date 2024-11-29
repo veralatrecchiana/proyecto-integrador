@@ -2,7 +2,7 @@ const recetasLista = document.querySelector(".recetasLista");
 const loadMoreButton = document.getElementById("load-more");
 
 let indiceRecetas = 0; // Índice actual de recetas
-const masRecetas = 10; // Cantidad de recetas a cargar por "ver mas"
+const masRecetas = 10; // Cantidad de recetas a cargar por "ver más"
 
 function loadRecipes() {
   fetch('https://dummyjson.com/recipes')
@@ -12,11 +12,12 @@ function loadRecipes() {
     .then(function(data) {
       const allRecipes = data.recipes;
 
-      // Obtener las próximas recetas a mostrar
       const nextRecipes = allRecipes.slice(indiceRecetas, indiceRecetas + masRecetas);
 
-      nextRecipes.forEach(function(receta) {
-        const markUp = `
+      let recetasMarkup = '';
+      for (let i = 0; i < nextRecipes.length; i++) {
+        const receta = nextRecipes[i];
+        recetasMarkup += `
           <article class="receta">
             <img src="${receta.image}" alt="${receta.name}" class="receta-img">
             <h2>${receta.name}</h2>
@@ -24,12 +25,13 @@ function loadRecipes() {
             <a href="receta.html?id=${receta.id}" class="detalle-link">Ver detalles</a>
           </article>
         `;
-        recetasLista.innerHTML += markUp;
-      });
+      }
+
+      recetasLista.innerHTML += recetasMarkup;
 
       indiceRecetas += masRecetas;
 
-      // Desactivar el botón si no hay más recetas
+      // Desactiva botón si no hay más recetas
       if (indiceRecetas >= allRecipes.length) {
         loadMoreButton.style.display = "none";
       }
@@ -39,8 +41,8 @@ function loadRecipes() {
     });
 }
 
-// Evento para cargar más recetas al hacer click
+//Carga más recetas
 loadMoreButton.addEventListener("click", loadRecipes);
 
-// Cargar las primeras recetas al cargar la página
+// Carga primeras recetas al cargar la página
 loadRecipes();

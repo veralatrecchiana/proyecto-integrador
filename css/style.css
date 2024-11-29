@@ -1,0 +1,497 @@
+*{
+    margin: 0;
+    padding: 0;
+} /*saco bordes generales de la pagina*/
+
+/*header*/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 0 30px;
+    background-color: aliceblue;
+    width: 100%;
+}
+
+header .logo{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+header .logo img{
+    width: 200px;
+}
+header ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header li{
+    margin-left: 30px;
+    list-style: none; /* saco puntos de lista*/
+}
+
+header a{
+    text-decoration: none;
+    color: black;
+}
+
+.button{
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 10px 20px;
+    margin-top: 15px;
+    background-color: lightblue;
+    margin-right: 70px;
+}
+
+.navigation{
+    align-items: center;
+}
+
+/*footer*/
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    padding: 20px 0;
+    margin-top: 100%;
+    background-color: aliceblue;
+    text-align: center;
+    bottom: 0%;
+    width: 100%;
+}
+
+/*body*/
+h1{
+    display: flex;
+    color: lightblue;
+    align-items: center;
+    height: 30px;
+    margin: 15px;
+    justify-content: center;
+    text-align: center;
+}
+
+.recetasLista{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.receta{
+    border: 1px solid black;
+    border-radius: 8px;
+    width: 20%;
+    padding-bottom: 30px
+}
+
+.receta h2{
+    font-size: 20px;
+}
+
+.receta a{
+    text-decoration: none;
+    background-color: lightblue;
+    margin-top: 15px;
+    color: black;
+    border: 1px solid black;
+    margin-top: 5px;
+}
+
+.recetasLista img{
+    width: 100%;
+    height: 150px;
+    margin-bottom: 30px;
+}
+
+.recetasLista .receta{
+    box-sizing: border-box; 
+    text-align: center;
+    margin: 10px;
+}
+
+.button2{
+    display: flex;
+    background-color: lightblue;
+    align-items: center;
+    height: 30px;
+    margin: 15px auto;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+}
+
+/*login*/
+.login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    margin-bottom: 10px;
+}
+
+.login h2{
+    margin-bottom: 2px;
+    color: lightblue;
+    margin-bottom: 10PX;
+}
+
+.login input{
+    margin-bottom: 10px;
+    height: 30px;
+    width: 200px;
+}
+
+.login .cuenta{
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+/*register*/
+.registro h2{
+    margin-bottom: 10px;
+    color: lightblue;
+}
+.registro{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin-bottom: 10px;
+    
+}
+
+.registro .cuenta{
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.registro input{
+    margin-bottom: 10px;
+    height: 30px;
+    width: 200px;
+}
+.registro input[type='checkbox']{
+    width: 30px;
+    margin: 0;
+}
+.cuenta{
+    color: black;
+    border: 1px solid black;
+    background-color: lightblue;
+}
+
+.cuenta:hover{
+    opacity: .3;
+}
+
+.terminos{
+    display: flex;
+    justify-content: center;
+}
+
+.acepto{
+    margin-right: 5px;
+}
+
+/*categories*/
+.categories {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px; 
+    padding: 40px;
+}
+
+.categorias h2 {
+    width: 300px; /
+    padding: 20px;
+    border: 1px solid black;
+    text-align: center;
+    background-color: lightblue;
+    box-sizing: border-box; 
+    margin: 0; 
+}
+
+.categorias a {
+    text-decoration: none;
+    color: black;
+}
+
+/*receta*/
+.receta2{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 30px;
+   
+    margin-bottom: 5px;
+}
+
+.receta2 .imagen{
+    width: 45%;
+}
+
+.receta2 .contenido{
+    width: 45%;
+}
+
+.receta-img{
+    width:500px;
+    align-items: center;
+    margin: 4px;
+}
+
+.nombreReceta{
+    color: lightblue;
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+
+/*search-results*/
+.resultados-busqueda{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+    padding: 20px;
+    justify-content: center; 
+}
+
+.receta{
+    display: flex;
+    width: 280px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    margin: 20px;
+    flex-direction: column;
+}
+  
+.receta-img{
+    width: 100%;
+    height: 150px;
+    margin-bottom: 30px;
+}
+
+.receta h2{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.busqueda-data{
+    font-size: 10px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/*category*/
+.receta2 {
+    display: flex; 
+    gap: 20px; 
+}
+
+.receta2 .imagen {
+    flex: 1; 
+}
+
+.receta2 .contenido {
+    flex: 2; 
+}
+
+.receta-img {
+    width: 100%; 
+    height: auto; 
+}
+
+@media (max-width:640px){
+    /*category*/
+    .receta2{
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+    .receta2 .imagen{
+        width: 250px;
+    }
+    
+    .receta2 .contenido{
+        width: 100%;
+    }
+
+    .receta-img{
+        align-items: center;
+        margin: 4px;
+    }
+
+    /*header*/
+    header{
+        display: block;
+        padding: 0;
+        background-color: aliceblue;
+        width: 100%;
+        height: auto;
+        align-items: center;
+        text-align: center;
+    }
+    
+    header .logo{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    header .logo img{
+        width: 200px;
+    }
+    header ul{
+        display: block;
+    }
+    
+    header li{
+        margin-left: 10px;
+        list-style: none; /* saco puntos de lista*/
+    }
+    
+    header a{
+        text-decoration: none;
+        color: black;
+    }
+    
+    .button{
+        text-decoration: none;
+        color: black;
+        background-color: white;
+        padding: 10px 20px;
+        margin-top: 15px;
+        background-color: lightblue;
+        margin-right: 3px;
+        margin-bottom: 5px;
+    }
+    
+    .navigation{
+        align-items: center;
+    }
+    
+    /*body*/
+    h1{
+        display: block;
+        color: lightblue;
+        margin: 15px;
+        text-align: center;
+    }
+    
+    .recetasLista{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+    }
+    
+    .receta{
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        width: 20%;
+        padding-bottom: 30px
+    }
+    
+    .receta h2{
+        font-size: 15px;
+    }
+    
+    .receta a{
+        text-decoration: none;
+        background-color: lightblue;
+        margin-top: 15px;
+        color: black;
+        border: 1px solid black;
+        margin-top: 5px;
+    }
+    
+    .recetasLista img{
+        width: 95%;
+        height: auto;
+        margin-bottom: 30px;
+    }
+    
+    .recetasLista .receta{
+        box-sizing: border-box; 
+        text-align: center;
+        margin: 10px;
+        width: 50%;
+    }
+    .categories{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 40px;
+    }
+    /*categories*/
+    .categorias h2 {
+        width: 200px; 
+        height: 90px; 
+        border: 1px solid black;
+        text-align: center;
+        background-color: lightblue;
+        margin: 5px;
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        box-sizing: border-box; 
+    }
+    
+    .categorias a {
+        text-decoration: none;
+        color: black;
+        text-align: center;
+    }
+    /*search-results*/
+    .resultados-busqueda{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px; 
+        padding: 20px;
+        justify-content: center; 
+    }
+
+    .receta{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 4px;
+    }
+    
+    .receta-img{
+        width: 100%;
+        height: 150px;
+        margin-bottom: 30px;
+    }
+
+    .receta h2{
+        font-size: 20px;;
+    }
+
+    .busqueda-data{
+        font-size: 10px;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
